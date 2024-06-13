@@ -1,5 +1,10 @@
 {
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "start": "npm run build && node dist/index.js",
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
@@ -8,6 +13,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
-    "tsx": "^4.7.1"
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.5"
   }
 }
