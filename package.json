@@ -7,8 +7,7 @@
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
     "docker:build": "docker build -t hono-api-img .",
-    "docker:clean": "docker stop hono-api && docker rm hono-api",
-    "docker:start": "docker run -it --name hono-api -p 3000:3000 hono-api-img"
+    "docker:start": "docker rm hono-api && docker run -it --name hono-api -p 3000:3000 hono-api-img"
   },
   "dependencies": {
     "@hono/node-server": "^1.11.2",
